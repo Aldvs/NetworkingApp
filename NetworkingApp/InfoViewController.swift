@@ -11,10 +11,11 @@ class InfoViewController: UIViewController {
 
     var info: Model!
     
+    @IBOutlet weak var labelInfo: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
 
