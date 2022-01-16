@@ -62,6 +62,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Q5X-pA-5Ud"/>
+                    <connections>
+                        <outlet property="labelInfo" destination="hP4-rW-Int" id="TGr-WL-T6T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FiB-NA-IMm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

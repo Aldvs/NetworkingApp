@@ -15,6 +15,11 @@ class InfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        labelInfo.text = """
+Имя: \(info.name)
+Возраст: \(info.age)
+Число: \(info.count)
+"""
 
     }
     
