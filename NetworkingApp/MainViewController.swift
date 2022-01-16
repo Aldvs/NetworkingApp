@@ -10,31 +10,40 @@ import UIKit
 class MainViewController: UIViewController {
     
     var ourLink = "https://api.agify.io/?name=bella"
+    var jsonInfo: Model!
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let infoVC = segue.destination as? InfoViewController else {return}
-        infoVC.info = fetchInfo()
+        infoVC.info = jsonInfo
     }
-}
-
-//MARK: - Extensions
-extension MainViewController {
-    
-    private func fetchInfo() -> Model {
-        guard let url = URL(string: ourLink) else { return Model(name: "Error", age: 1, count: 1) }
+    @IBAction func getInfo() {
+        guard let url = URL(string: ourLink) else { return }
         
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else {
                 print(error?.localizedDescription ?? "No error description")
                 return
             }
-            guard let temp = try? JSONDecoder().decode(Model.self, from: data) else {
-                return
+            
+            do {
+                let info = try JSONDecoder().decode(Model.self, from: data)
+                self.successAlert()
+                self.jsonInfo = info
+                print(info)
+            } catch {
+                self.failedAlert()
+                print(error.localizedDescription)
             }
+            
 
         }.resume()
     }
+}
+    
 
+
+//MARK: - Extensions
+extension MainViewController {
     // MARK: - Private Methods
     private func successAlert() {
         DispatchQueue.main.async {
