@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
         guard let infoVC = segue.destination as? InfoViewController else {return}
         infoVC.info = jsonInfo
     }
+    
     @IBAction func getInfo() {
         guard let url = URL(string: ourLink) else { return }
         
@@ -34,8 +35,6 @@ class MainViewController: UIViewController {
                 self.failedAlert()
                 print(error.localizedDescription)
             }
-            
-
         }.resume()
     }
 }

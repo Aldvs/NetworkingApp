@@ -20,7 +20,6 @@ class InfoViewController: UIViewController {
 Возраст: \(info.age)
 Число: \(info.count)
 """
-
     }
     
 
