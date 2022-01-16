@@ -21,6 +21,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="JSON Parsing"/>
                                 <connections>
+                                    <action selector="getInfo" destination="BYZ-38-t0r" eventType="touchUpInside" id="m50-gB-5JK"/>
                                     <segue destination="Lq1-MQ-vvc" kind="show" id="UvN-JU-wRm"/>
                                 </connections>
                             </button>
