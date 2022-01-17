@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		845A61092795F705006E0CE3 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A61082795F705006E0CE3 /* NetworkingManager.swift */; };
 		84AD2D862794ABCD0060BA3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD2D852794ABCD0060BA3B /* AppDelegate.swift */; };
 		84AD2D882794ABCD0060BA3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD2D872794ABCD0060BA3B /* SceneDelegate.swift */; };
 		84AD2D8A2794ABCD0060BA3B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD2D892794ABCD0060BA3B /* MainViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		845A61082795F705006E0CE3 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		84AD2D822794ABCD0060BA3B /* NetworkingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AD2D852794ABCD0060BA3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84AD2D872794ABCD0060BA3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				84AD2D892794ABCD0060BA3B /* MainViewController.swift */,
 				84AD2D9D2794B3040060BA3B /* InfoViewController.swift */,
 				84AD2D992794AF510060BA3B /* Model.swift */,
+				845A61082795F705006E0CE3 /* NetworkingManager.swift */,
 				84AD2D8B2794ABCD0060BA3B /* Main.storyboard */,
 				84AD2D8E2794ABD20060BA3B /* Assets.xcassets */,
 				84AD2D902794ABD20060BA3B /* LaunchScreen.storyboard */,
@@ -147,6 +150,7 @@
 				84AD2D8A2794ABCD0060BA3B /* MainViewController.swift in Sources */,
 				84AD2D862794ABCD0060BA3B /* AppDelegate.swift in Sources */,
 				84AD2D882794ABCD0060BA3B /* SceneDelegate.swift in Sources */,
+				845A61092795F705006E0CE3 /* NetworkingManager.swift in Sources */,
 				84AD2D9E2794B3040060BA3B /* InfoViewController.swift in Sources */,
 				84AD2D9A2794AF510060BA3B /* Model.swift in Sources */,
 			);
