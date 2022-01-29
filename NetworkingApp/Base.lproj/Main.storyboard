@@ -22,7 +22,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="JSON Parsing"/>
                                 <connections>
                                     <action selector="getInfo" destination="BYZ-38-t0r" eventType="touchUpInside" id="m50-gB-5JK"/>
-                                    <segue destination="Lq1-MQ-vvc" kind="show" id="UvN-JU-wRm"/>
+                                    <segue destination="Lq1-MQ-vvc" kind="show" identifier="jsonParsing" id="UvN-JU-wRm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rlf-h9-YY5">
@@ -38,7 +38,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Alamofire"/>
                                 <connections>
-                                    <segue destination="Frg-nK-jq3" kind="show" id="OeY-cL-Rpe"/>
+                                    <segue destination="Frg-nK-jq3" kind="show" identifier="alamofireParsing" id="OeY-cL-Rpe"/>
                                 </connections>
                             </button>
                         </subviews>

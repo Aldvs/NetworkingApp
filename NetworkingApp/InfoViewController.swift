@@ -8,7 +8,6 @@
 import UIKit
 
 class InfoViewController: UIViewController {
-
         
     @IBOutlet weak var labelInfo: UILabel!
     

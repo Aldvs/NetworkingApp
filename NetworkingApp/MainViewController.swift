@@ -18,11 +18,15 @@ class MainViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let infoVC = segue.destination as? InfoViewController else {return}
-//        guard let alamofireInfoVC = segue.destination as? AlamofireInfoViewController else { return }
-        infoVC.info = jsonInfo
-//        alamofireInfoVC.info = alamofireInfo
         
+        switch segue.identifier {
+        case "jsonParsing":
+            guard let infoVC = segue.destination as? InfoViewController else { return }
+            infoVC.info = jsonInfo
+        default:
+            guard let alamofireInfoVC = segue.destination as? AlamofireInfoViewController else { return }
+            alamofireInfoVC.info = alamofireInfo
+        }
     }
     
     @IBAction func getInfo() {

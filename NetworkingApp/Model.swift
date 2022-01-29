@@ -33,7 +33,7 @@ struct Model: Decodable {
     }
     
     static func getModel(from value: Any) -> Model {
-        guard let modelData = value as? [String: Any] else { return Model.init(name: "", age: 0, count: 0) }
+        guard let modelData = value as? [String: Any] else { return Model.init(name: "EMPTY", age: 0, count: 0) }
         let model = Model.init(fetchedData: modelData)
         return model
     }
