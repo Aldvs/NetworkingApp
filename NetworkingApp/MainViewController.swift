@@ -12,10 +12,7 @@ class MainViewController: UIViewController {
     var jsonInfo: Model!
     
     override func viewDidLoad() {
-        NetworkingManager.shared.fetchInfo(
-            NetworkingManager.shared.ourLink) { parsedInfo in
-                self.jsonInfo = parsedInfo
-            } // перенести это в метод и вызвать его тут
+        fetchData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,6 +30,7 @@ class MainViewController: UIViewController {
     private func fetchData() {
         NetworkingManager.shared.fetchInfo(
             NetworkingManager.shared.ourLink) { parsedInfo in
+                self.jsonInfo = parsedInfo
                 print(parsedInfo)
             }
     }
