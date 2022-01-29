@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
         NetworkingManager.shared.fetchInfo(
             NetworkingManager.shared.ourLink) { parsedInfo in
                 self.jsonInfo = parsedInfo
-            }
+            } // перенести это в метод и вызвать его тут
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
