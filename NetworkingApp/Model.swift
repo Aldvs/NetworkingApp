@@ -7,6 +7,13 @@
 
 import Foundation
 
+struct ModelOne: Decodable {
+    
+    let name: String
+    let age: Int
+    let count: Int
+}
+
 struct Model: Decodable {
     
     let name: String?
@@ -30,5 +37,7 @@ struct Model: Decodable {
         let model = Model.init(fetchedData: modelData)
         return model
     }
-    
 }
+
+
+

@@ -16,9 +16,9 @@ class AlamofireInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         labelInfo.text = """
-                            Имя: \(info.name)
-                            Возраст: \(info.age)
-                            Число: \(info.count)
+                            Имя: \(info.name ?? "EMPTY")
+                            Возраст: \(info.age ?? 0)
+                            Число: \(info.count ?? 0)
                         """
     }
     

@@ -12,7 +12,7 @@ class InfoViewController: UIViewController {
         
     @IBOutlet weak var labelInfo: UILabel!
     
-    var info: Model!
+    var info: ModelOne!
 
     override func viewDidLoad() {
         super.viewDidLoad()
