@@ -6,6 +6,13 @@
 //
 
 import UIKit
+import Alamofire
+
+enum NetworkError: Error {
+    case invalidURL
+    case noData
+    case decodingError
+}
 
 class NetworkingManager {
     
@@ -32,5 +39,19 @@ class NetworkingManager {
                 print(error.localizedDescription)
             }
         }.resume()
+    }
+    
+    func fetchDataWithAlomafire(_ url: String, completion: @escaping(Result<Model, NetworkError>) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    let info = Model.getModel(from: value)
+                    completion(.success(info))
+                case .failure:
+                    completion(.failure(.decodingError))
+                }
+            }
     }
 }
