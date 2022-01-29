@@ -8,11 +8,14 @@
 import UIKit
 
 class AlamofireInfoViewController: UIViewController {
-
+    
+    //MARK: - IB Outlets
     @IBOutlet weak var labelInfo: UILabel!
     
+    //MARK: - Public Properties
     var info: Model!
     
+    //MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         labelInfo.text = """

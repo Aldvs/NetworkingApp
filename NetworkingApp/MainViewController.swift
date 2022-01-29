@@ -9,14 +9,17 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    //MARK: - Public Properties
     var jsonInfo: ModelOne!
     var alamofireInfo: Model!
     
+    //MARK: - Life Cycles Methods
     override func viewDidLoad() {
         fetchData()
         fetchAlamofireData()
     }
     
+    //MARK: - NAvigation Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         switch segue.identifier {
@@ -29,13 +32,12 @@ class MainViewController: UIViewController {
         }
     }
     
-    @IBAction func getInfo() {
-    }
-    
+    //MARK: - IB Actions
     @IBAction func getCosoleCheck() {
         fetchData()
     }
     
+    //MARK: - Private Methods
     private func fetchData() {
         NetworkingManager.shared.fetchInfo(
             NetworkingManager.shared.ourLink) { parsedInfo in
@@ -43,6 +45,7 @@ class MainViewController: UIViewController {
                 print(parsedInfo)
             }
     }
+    
     private func fetchAlamofireData() {
         NetworkingManager.shared.fetchDataWithAlomafire(NetworkingManager.shared.ourLink) { result in
             switch result {

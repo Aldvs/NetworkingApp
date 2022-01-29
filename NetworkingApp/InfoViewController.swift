@@ -8,11 +8,14 @@
 import UIKit
 
 class InfoViewController: UIViewController {
-        
+    
+    //MARK: - IB Outlets
     @IBOutlet weak var labelInfo: UILabel!
     
+    //MARK: - Public Properties
     var info: ModelOne!
-
+    
+    //MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
