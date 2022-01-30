@@ -9,9 +9,9 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    //MARK: - Public Properties
-    var jsonInfo: ModelOne!
-    var alamofireInfo: Model!
+    //MARK: - Private Properties
+    private var jsonInfo: ModelOne!
+    private var alamofireInfo: Model!
     
     //MARK: - Life Cycles Methods
     override func viewDidLoad() {
